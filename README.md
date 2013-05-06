@@ -29,7 +29,7 @@ A simple as just running `bootstrap`
 
 ```sh
 git clone https://github.com/solobit/Vielsprachig && cd Vielsprachig
-./bootstrap
+sh bootstrap
 ```
 
 Always check any (`+x` executable) scripts source code before you execute.
@@ -47,8 +47,9 @@ npm install && git submodule update --init
 
 We do `npm install` first since that will create our `node_modules` folder
 according to dependencies specified in `package.json`. Only if that succeeds
-(`&&`), do a `git submodule` update and intialize: it clones missing submodules
-and checks out the commit specified in the index as a detached `HEAD`.
+(`&&`), do a `git submodule` update and initialise. This clones any missing
+submodules and checks out the commit specified in the index as a detached
+`HEAD`.
 
 
 
