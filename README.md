@@ -26,14 +26,24 @@ Check `package.json` for the exact project names.
 A simple as just running `bootstrap`
 
 ```sh
-git clone https://github.com/solobit/Vielsprachig
-cd Vielsprachig
+git clone https://github.com/solobit/Vielsprachig && cd Vielsprachig
 ./bootstrap
-
-# or, if you don't like .sh scripts omit bootstrap and do
-# git submodule update --init
-# npm install
 ```
+
+The `bootstrap` file is just a `.sh` executable script with two commands
+chained conditionally, `
+
+```sh`
+# if you don't like other peoples .sh scripts, omit ./bootstrap and do:
+npm install && git submodule update --init
+```
+
+npm install` first since that will create our
+`node_modules` folder according to dependencies in `package.json`. Next `git
+submodule` update and intialize: it clones missing submodules and checks out
+the commit specified in the index as a detached `HEAD`.
+
+
 
 
 
