@@ -1,0 +1,3 @@
+[submodule "node_modules/coffee-toml"]
+	path = node_modules/coffee-toml
+	url = git://github.com/biilmann/coffee-toml.git
