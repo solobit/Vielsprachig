@@ -1,0 +1,5 @@
+#!/bin/sh
+
+npm install && git submodule update --init || { printf "\n%s\n" "
+Failure to npm install and git submodule. Exiting."; exit 1; }
+
