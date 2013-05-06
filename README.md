@@ -29,7 +29,7 @@ A simple as just running `bootstrap`
 
 ```sh
 git clone https://github.com/solobit/Vielsprachig && cd Vielsprachig
-sh bootstrap
+sh bootstrap.sh
 ```
 
 Always check any (`+x` executable) scripts source code before you execute.
@@ -41,15 +41,14 @@ The `bootstrap` file is just a `.sh` executable script with two commands
 chained conditionally:
 
 ```sh`
-# if you don't like other peoples .sh scripts, omit ./bootstrap and do:
 npm install && git submodule update --init
 ```
 
-We do `npm install` first since that will create our `node_modules` folder
-according to dependencies specified in `package.json`. Only if that succeeds
-(`&&`), do a `git submodule` update and initialise. This clones any missing
-submodules and checks out the commit specified in the index as a detached
-`HEAD`.
+This downloads the `node_modules` from the npmjs.org referenced git(hub)
+repositories as per dependencies specified in `package.json`. Only if that
+succeeds, do a `git submodule` update and initialise the repositories which are
+not served by node.js package manager. This clones any missing submodules and
+checks out the commit specified in the index as a detached `HEAD`.
 
 
 
